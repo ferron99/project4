@@ -22,8 +22,6 @@ void setup() {
   for (int i = 0; i < fer.length; i++) {
     fer[i] = new Ball(random(t.middle+20,t.right-15), random(t.top+15,t.bottom-15), 30, i, fer);
   }
-  
-  
   reset();
 }
 
@@ -41,19 +39,12 @@ void reset() {
 void draw() {
   background( 102,178,205 );
   t.tableDisplay();
-  //drawGrass();
-  //drawClouds();
   for (Ball b : fer) {
     //b.resetCheck();
     b.collide();
     b.move();
     b.show();  
   }
-  //buttons();
-  //birds();
-  //rats();
-  //frame +=1;
-  //showScore();
 }
 
 // KEY PRESSED stuff: exit, reset, other buttons
